@@ -13,7 +13,7 @@ def emgen():
     if not re.match(r"[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", request.json['email']):
         return abort(400, 'Must pass a valid email')
 
-    if request.json['email'].find('@emgen.io'):
+    if request.json['email'].lower().find('@emgen.io') or request.json['email'].lower().find('@104.236.249.213'):
         return abort(400, 'Must pass a valid email. Not an emgen one you sneaky severus snape.')
 
 
