@@ -63,6 +63,13 @@
             return re.test(email);
         }
 
+        function isEmgenEmail (email) {
+            if (email.indexOf('@emgen.io') !== -1) {
+                return true;
+            }
+            return false;
+        }
+
         jQuery(function ($) {
             var form = $('#form'),
                 but = $('#but'),
@@ -82,7 +89,7 @@
             form.submit(function (e) {
                 var email_value = email.val();
 
-                if (validEmail(email_value)) {
+                if (validEmail(email_value) && !isEmgenEmail(email_value)) {
                     but.html('Generating...');
                     ga('send', 'event', 'button', 'click', 'submit');
                     jQuery.ajax({
