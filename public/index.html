@@ -25,10 +25,42 @@
         <meta name="google-site-verification" content="9OcG0cxkHgKRGJo78sIdtwSt0_XlSUG8SYqvVX97QrA" />
     </head>
     <body>
+        <div class="sticky">
+            <nav class="top-bar" data-topbar role="navigation">
+              <ul class="title-area">
+                <li class="name">
+                  <h1><a href="#">emgen.io</a></h1>
+                </li>
+                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+              </ul>
+
+              <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                  <!-- <li class="active"><a href="#">Right Button Active</a></li>
+                  <li class="has-dropdown">
+                    <a href="#">Right Button Dropdown</a>
+                    <ul class="dropdown">
+                      <li><a href="#">First link in dropdown</a></li>
+                      <li class="active"><a href="#">Active link in dropdown</a></li>
+                    </ul>
+                  </li> -->
+                  <li><a target="_blank" href="http://blog.djcentric.com/introducing-emgen-io/">About Emgen</a></li>
+                  <li><a target="_blank" href="http://blog.djcentric.com/tag/emgen-io/">Blog</a></li>
+                </ul>
+
+                <!-- Left Nav Section -->
+                <!-- <ul class="left">
+                  <li><a href="#">Left Nav Button</a></li>
+                </ul> -->
+              </section>
+            </nav>
+        </div>
         <div class="content">
             <div class="row">
                 <div class="columns small-12 small-centered text-center">
-                    <h1>emgen.io</h1>
+                    <!-- <h1>emgen.io</h1> -->
                     <h4 class="subheader">Throwaway Email Generator</h4>
                 </div>
             </div>
@@ -57,7 +89,10 @@
         </div>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js"></script>
         <script type="text/javascript">
+        $(document).foundation();
+        
         function validEmail(email) {
             var re = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
             return re.test(email);
